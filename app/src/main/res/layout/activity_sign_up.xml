@@ -132,4 +132,15 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_signUp" />
 
 
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="68dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
