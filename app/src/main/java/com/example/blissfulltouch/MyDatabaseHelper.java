@@ -133,5 +133,25 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return result > 0;
     }
 
+
+    public boolean checkUsername(String username) {
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_EMAIL + " = ?", new String[]{username});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close(); // Close the cursor
+        MyDB.close(); // Close the database connection
+        return exists;
+    }
+
+    public boolean checkUsernamePassword(String username, String password) {
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_EMAIL + " = ? AND " + COLUMN_PASSWORD + " = ?", new String[]{username, password});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close(); // Close the cursor
+        MyDB.close(); // Close the database connection
+        return exists;
+    }
+
+
 }
 
