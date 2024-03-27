@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="img_service" type="id" />
+    <item name="tv_service_title" type="id" />
+    <item name="tv_price" type="id" />
+    <item name="tv_details" type="id" />
+    <item name="rating_bar" type="id" />
+    <item name="btn_book" type="id" />
+    <item name="tv_reviews_title" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="btn_back" type="id" />
+    <item name="btn_cancel" type="id" />
+    <item name="btn_confirm" type="id" />
+    <item name="et_review" type="id" />
+</resources>
