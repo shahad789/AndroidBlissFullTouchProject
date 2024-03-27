@@ -62,7 +62,6 @@
     <string name="book_now">Book Now</string>
     <string name="reservations">Reservations</string>
     <string name="logout">Logout</string>
-    <string name="back" />
     <string name="service_title">Service Title</string>
     <string name="customers_reviews">Customers Reviews</string>
     <string name="customers_reviews1">Customers Reviews</string>
@@ -77,5 +76,32 @@
     <string name="service_title1">Service Title</string>
     <string name="back1">Back</string>
 
+
+
+
+    <string name="back">Back</string>
+    <string name="reservation_information">RESERVATION INFORMATION</string>
+    <string name="your_booking_time_is">Your Booking time is:</string>
+    <string name="your_reservation_is">Your reservation is:</string>
+    <string name="at_taim">Your time:</string>
+    <string name="_6_30pm">6:30pm</string>
+    <string name="_21_3_2024">21/3/2024</string>
+    <string name="at_home">At Home</string>
+    <string name="at_the_blissful_touch">At The Spa</string>
+    <string name="cancle">Cancel</string>
+    <string name="enter_reservation_date">Enter reservation date</string>
+    <string name="todo2">TODO</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="enter_reservation_date2">Enter reservation date</string>
+    <string name="_6_30pm2">6:30pm</string>
+    <string name="at_home2">At Home</string>
+    <string name="at_the_blissful_touch2">At The spa</string>
+    <string name="cancle2">Cancel</string>
+    <string name="registration_form2">Registration Form</string>
+    <string name="enter_reservation_dat">Enter reservation date</string>
+    <string name="enter_reservation_da">Enter reservation date</string>
+    <string name="todo3">TODO</string>
+    <string name="location2">Location:</string>
+    <string name="todo4">TODO</string>
 
 </resources>
