@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registrationViewForm"
+    tools:ignore="ExtraText">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BackButton"
+        android:layout_width="122dp"
+        android:layout_height="63dp"
+        android:width="60dp"
+        android:background="@drawable/round_bt2"
+        android:backgroundTint="#E4C7B7"
+        android:text="@string/back"
+        android:textColor="#37474F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/reserinfo"
+        android:layout_width="390dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="40dp"
+        android:background="#E4C7B7"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/reservation_information"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="182dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reserinfo"
+        app:srcCompat="@drawable/man"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="411dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_bt2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/yourtaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#FFF7F7"
+        android:text="@string/your_booking_time_is"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/yourtaim"
+        android:layout_width="179dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="@color/white"
+        android:text="@string/your_reservation_is"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/yourtaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#000000"
+        android:text="@string/at_taim"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/anstaim"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/manicure_and_pedicure"
+        android:textColor="#191918"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/anstaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/_21_3_2024"
+        android:textColor="#191818"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/anstaim"
+        android:layout_width="71dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/_6_30pm"
+        android:textColor="#1C1C1B"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.664"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" /><![CDATA[
+
+
+
+
+
+
+
+
+
+
+
+
+
+    20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="307dp" />160dp"
+        tools:layout_editor_absoluteY="321dp" />
+
+
+
+
+
+
+]]>
+</androidx.constraintlayout.widget.ConstraintLayout>

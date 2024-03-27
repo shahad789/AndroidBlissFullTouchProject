@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registrationForm">
+
+
+    <TextView
+        android:id="@+id/Regist"
+        android:layout_width="384dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="44dp"
+        android:background="#B5AD98"
+        android:fontFamily="serif"
+        android:shadowColor="#BFB492"
+        android:text="@string/registration_form2"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,TextContrastCheck,TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/enterdate"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="112dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_reservation_dat"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#181819"
+        android:textColorHint="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Regist"
+        app:layout_constraintVertical_bias="0.24"
+        tools:ignore="MissingConstraints,DuplicateSpeakableTextCheck" />
+
+    <EditText
+
+        android:id="@+id/entertaime"
+        android:layout_width="318dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_reservation_da"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#181819"
+        android:textColorHint="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterdate"
+        app:layout_constraintVertical_bias="0.063"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
+        android:layout_margin="100dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="serif"
+        android:includeFontPadding="false"
+        android:text="@string/location2"
+        android:textColor="@color/black"
+
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterdate"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <RadioButton
+        android:id="@+id/AtHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-condensed"
+        android:minHeight="48dp"
+        android:text="@string/at_home2"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/Atspa"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgelocation1"
+        tools:ignore="MissingConstraints" />
+
+    <RadioButton
+        android:id="@+id/Atspa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="76dp"
+        android:minHeight="48dp"
+        android:text="@string/at_the_blissful_touch2"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgelocation1"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgelocation1"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/todo3"
+        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/entertaime"
+        app:srcCompat="@drawable/location"
+        tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imgtime2"
+        android:layout_width="38dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/todo4"
+        app:layout_constraintBottom_toTopOf="@+id/imgelocation1"
+        app:layout_constraintEnd_toStartOf="@+id/entertaime"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgedate3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_access_time_24"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgedate3"
+        android:layout_width="41dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="155dp"
+
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/entertaime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Regist"
+        app:layout_constraintVertical_bias="0.125"
+        app:srcCompat="@drawable/baseline_article_24"
+        tools:ignore="ContentDescription,HardcodedText,MissingConstraints,ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:backgroundTint="#BCAD93"
+        android:text="Button"
+        android:textColorHighlight="#613B3B"
+        android:textColorLink="#CAA2A2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Atspa"
+        app:layout_constraintVertical_bias="0.465"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#BCAD93"
+        android:text="@string/cancle2"
+        android:textColorHighlight="#613B3B"
+        android:textColorLink="#CAA2A2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toEndOf="@+id/Add"
+        app:layout_constraintTop_toBottomOf="@+id/AtHome"
+        app:layout_constraintVertical_bias="0.465"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
