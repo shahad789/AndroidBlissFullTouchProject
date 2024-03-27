@@ -55,30 +55,27 @@
     <string name="confirm1">confirm</string>
 
 
-
-        <string name="app_name2">productDetails_page</string>
-        <string name="todo">TODO</string>
-        <string name="price_10">Price: $10</string>
-        <string name="service_details_lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit">Service Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
-        <string name="book_now">Book Now</string>
-        <string name="reservations">Reservations</string>
-        <string name="logout">Logout</string>
-        <string name="back" />
-        <string name="service_title">Service Title</string>
-        <string name="customers_reviews">Customers Reviews</string>
-        <string name="customers_reviews1">Customers Reviews</string>
-        <string name="example_review_1">Example Review 1</string>
-        <string name="example_review_2">Example Review 2</string>
-        <string name="example_review_3">Example Review 3</string>
-        <string name="logout1">logout</string>
-        <string name="write_your_review_here">Write your review here</string>
-        <string name="confirm2">Confirm</string>
-        <string name="service_details">Service Details Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
-        <string name="price">Price: $10</string>
-        <string name="service_title1">Service Title</string>
-        <string name="back1">Back</string>
-
-
+    <string name="app_name2">productDetails_page</string>
+    <string name="todo">TODO</string>
+    <string name="price_10">Price: $10</string>
+    <string name="service_details_lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit">Service Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="book_now">Book Now</string>
+    <string name="reservations">Reservations</string>
+    <string name="logout">Logout</string>
+    <string name="back" />
+    <string name="service_title">Service Title</string>
+    <string name="customers_reviews">Customers Reviews</string>
+    <string name="customers_reviews1">Customers Reviews</string>
+    <string name="example_review_1">Example Review 1</string>
+    <string name="example_review_2">Example Review 2</string>
+    <string name="example_review_3">Example Review 3</string>
+    <string name="logout1">logout</string>
+    <string name="write_your_review_here">Write your review here</string>
+    <string name="confirm2">Confirm</string>
+    <string name="service_details">Service Details Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="price">Price: $10</string>
+    <string name="service_title1">Service Title</string>
+    <string name="back1">Back</string>
 
 
 </resources>

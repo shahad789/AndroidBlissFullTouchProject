@@ -1,0 +1,312 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_search"
+        android:drawableStart="@drawable/customsearchicon"
+        android:drawablePadding="12sp"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/what_you_are_looking_for1"
+        android:textColor="#090606"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints=""
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/sort"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="65dp"
+        android:backgroundTint="#C8A695"
+        android:drawableTop="@drawable/ic_sort"
+        android:textColor="#EDE3E3"
+        android:textColorHighlight="#F1EAEA"
+        android:textColorLink="#0FFFFFFF"
+        android:contentDescription="@string/buttonfotsorting" />
+
+    <TextView
+        android:id="@+id/MYres"
+        android:layout_width="345dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="10dp"
+        android:lineSpacingExtra="-1sp"
+        android:text="@string/home"
+        android:textColor="#895D47"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/image"
+        android:layout_width="400dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/boximg2"
+        android:contentDescription="@string/boxfordesplyngser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/first"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="165dp"
+        android:width="60dp"
+        android:backgroundTint="#C8A695"
+        android:text="@string/add"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/more"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="207dp"
+        android:width="60dp"
+        android:backgroundTint="#C8A695"
+        android:text="@string/more"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/sername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="170dp"
+        android:text="@string/manicure_and_pedicure"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/serdes"
+        android:layout_width="206dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="190dp"
+        android:text="@string/nail_care_treatments_to_beautify_and_pamper_hands_and_feet"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/image2"
+        android:layout_width="400dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="305dp"
+        android:background="@drawable/boximg2"
+        android:contentDescription="@string/boxfordesplyngser2"
+        app:layout_constraintEnd_toEndOf="@id/image"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:srcCompat="@drawable/second"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/Add1"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="320dp"
+        android:width="60dp"
+        android:backgroundTint="#C8A695"
+        android:text="@string/add1"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/more1"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="363dp"
+        android:width="60dp"
+        android:backgroundTint="#C8A695"
+        android:text="@string/more1"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/secname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="330dp"
+        android:text="@string/moroccan_bath"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/serdes1"
+        android:layout_width="169dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="350dp"
+        android:text="@string/des1"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/image3"
+        android:layout_width="400dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="470dp"
+        android:background="@drawable/boximg2"
+        android:contentDescription="@string/boxfordesser3"
+        app:layout_constraintEnd_toEndOf="@id/image2"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image2"
+        app:srcCompat="@drawable/third"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/add2"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="490dp"
+        android:width="60dp"
+        android:backgroundTint="#C8A695"
+        android:text="@string/add2"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/more2"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="533dp"
+        android:width="60dp"
+        android:backgroundTint="#C8A695"
+        android:text="@string/more2"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/thirdser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="490dp"
+        android:text="@string/des2"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/thirddes"
+        android:layout_width="173dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="510dp"
+        android:text="@string/des3"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        tools:ignore="SmallSp,TextSizeCheck" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        app:menu="@menu/menu" />
+
+    <RelativeLayout
+        android:id="@+id/alertDialogLayout"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corners"
+        android:elevation="50dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Are you sure you want to log out?"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageTextView"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#C8A695"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C8A695"
+                android:text="No" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.BlissfullTouch"
         tools:targetApi="31">
         <activity
+            android:name=".forlogout"
+            android:exported="true" />
+        <activity
+            android:name=".alertforok"
+            android:exported="true" />
+        <activity
             android:name=".confirmingpage"
             android:exported="true" />
         <activity
