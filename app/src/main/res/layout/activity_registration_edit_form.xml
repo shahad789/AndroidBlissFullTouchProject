@@ -165,7 +165,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:backgroundTint="#BCAD93"
-        android:text="Button"
+        android:text="Update"
         android:textColorHighlight="#613B3B"
         android:textColorLink="#CAA2A2"
         app:layout_constraintBottom_toBottomOf="parent"
