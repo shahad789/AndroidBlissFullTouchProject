@@ -41,10 +41,10 @@
             android:exported="true" />
         <activity
             android:name=".signUp"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".login"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"/>

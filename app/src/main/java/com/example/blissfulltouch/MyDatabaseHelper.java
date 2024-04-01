@@ -134,18 +134,18 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean checkUsername(String username) {
+    public boolean checkemail(String mail) {
         SQLiteDatabase MyDB = this.getReadableDatabase();
-        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_EMAIL + " = ?", new String[]{username});
+        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_EMAIL + " = ?", new String[]{mail});
         boolean exists = cursor.getCount() > 0;
         cursor.close(); // Close the cursor
         MyDB.close(); // Close the database connection
         return exists;
     }
 
-    public boolean checkUsernamePassword(String username, String password) {
+    public boolean checkEmailPassword(String email, String password) {
         SQLiteDatabase MyDB = this.getReadableDatabase();
-        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_EMAIL + " = ? AND " + COLUMN_PASSWORD + " = ?", new String[]{username, password});
+        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_EMAIL + " = ? AND " + COLUMN_PASSWORD + " = ?", new String[]{email, password});
         boolean exists = cursor.getCount() > 0;
         cursor.close(); // Close the cursor
         MyDB.close(); // Close the database connection
