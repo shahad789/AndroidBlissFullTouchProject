@@ -103,5 +103,9 @@
     <string name="todo3">TODO</string>
     <string name="location2">Location:</string>
     <string name="todo4">TODO</string>
+    <string name="search" />
+    <string name="enter_search_query">Enter search query</string>
+    <string name="name">name</string>
+    <string name="search1">search</string>
 
 </resources>

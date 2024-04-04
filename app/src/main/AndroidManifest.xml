@@ -14,40 +14,40 @@
         tools:targetApi="31">
         <activity
             android:name=".registrationEditForm"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".registrationViewForm"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".registrationForm"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".forlogout"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".alertforok"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".confirmingpage"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".searchpage"
             android:exported="true" />
         <activity
             android:name=".myreservationspage"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".homepage"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".signUp"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".login"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="false"/>
 
         <activity
             android:name=".productDetails"

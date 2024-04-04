@@ -151,7 +151,15 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         MyDB.close(); // Close the database connection
         return exists;
     }
-
+    public boolean addReservation(String location, String time, String date, String serviceName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_LOCATION, location);
+        contentValues.put(COLUMN_TIME, time);
+        contentValues.put(COLUMN_DATE, date);
+        long result = db.insert(TABLE_RESERVATION, null, contentValues);
+        return result != -1;
+    }
 
 }
 
