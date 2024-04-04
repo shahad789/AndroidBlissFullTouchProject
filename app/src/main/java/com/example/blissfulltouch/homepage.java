@@ -42,7 +42,7 @@ public class homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button editTextText = findViewById(R.id.editTextText);
+        Button editTextText = findViewById(R.id.editTextTextn);
         editTextText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

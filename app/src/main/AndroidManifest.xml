@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlissfullTouch"
         tools:targetApi="31">
+
         <activity
             android:name=".registrationEditForm"
             android:exported="false" />
@@ -47,12 +48,10 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".productDetails"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".review"
             android:exported="true">
