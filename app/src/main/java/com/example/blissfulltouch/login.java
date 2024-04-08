@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import io.github.muddz.styleabletoast.StyleableToast;
+
 public class login extends AppCompatActivity {
 
     EditText Email, Password;
@@ -41,7 +44,8 @@ public class login extends AppCompatActivity {
                 String pass = Password.getText().toString();
 
                 if(email.equals("")||pass.equals(""))
-                    Toast.makeText(login.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(login.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                StyleableToast.makeText(login.this,"Please enter all the fields",R.style.entrfld).show();
                 else{
                     Boolean check = DB.checkEmailPassword(email, pass);
                     if (check){
@@ -49,7 +53,8 @@ public class login extends AppCompatActivity {
                         intent.putExtra("userEmail",email);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(login.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(login.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                        StyleableToast.makeText(login.this,"Invalid Credentials",R.style.entrfld).show();
                     }
                 }
             }

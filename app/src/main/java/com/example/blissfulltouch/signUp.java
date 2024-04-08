@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import io.github.muddz.styleabletoast.StyleableToast;
+
 public class signUp extends AppCompatActivity {
 
     EditText signupEnteredName, signupEnteredAge, signupEnteredEmail, signupEnteredPassword;
@@ -50,20 +52,24 @@ public class signUp extends AppCompatActivity {
 
 
                 if (user.equals("") || pass.equals("") || email.equals("") || age.equals(""))
-                    Toast.makeText(signUp.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                  // Toast.makeText(signUp.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                    StyleableToast.makeText(signUp.this,"Please enter all the fields",R.style.entrfld).show();
                 else {
                     Boolean check = DB.checkemail(email);
                     if (!check) {
                         Boolean insert = DB.addUser(email, user,age,pass);
                         if (insert) {
-                            Toast.makeText(signUp.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(signUp.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                            StyleableToast.makeText(signUp.this,"Registered successfully",R.style.registsuccess).show();
                             Intent intent = new Intent(getApplicationContext(), login.class);
                             startActivity(intent);
                         } else {
-                            Toast.makeText(signUp.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(signUp.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                            StyleableToast.makeText(signUp.this,"Registration failed",R.style.entrfld).show();
                         }
                     } else {
-                        Toast.makeText(signUp.this, "Already exists! please sign in", Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(signUp.this, "Already exists! please sign in", Toast.LENGTH_SHORT).show();
+                        StyleableToast.makeText(signUp.this,"Already exists! please sign in",R.style.entrfld).show();
                     }
 
                 }
