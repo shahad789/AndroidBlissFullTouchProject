@@ -4,35 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
-<Button
-    android:id="@+id/editTextTextn"
-    android:layout_width="wrap_content"
-    android:layout_height="48dp"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentEnd="true"
-    android:layout_marginStart="12dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginTop="65dp"
-    android:layout_marginEnd="84dp"
-    android:layout_marginRight="10dp"
-    android:background="#C8A695"
-    android:drawableStart="@drawable/customsearchicon"
-    android:drawablePadding="12sp"
-    android:ems="10"
-    android:inputType="text"
-    android:paddingStart="12dp"
-    android:paddingEnd="12dp"
-    android:text="@string/what_you_are_looking_for1"
-    android:textColor="#000000"
-    android:textColorHighlight="#F1EAEA"
-    android:textColorLink="#0FFFFFFF"
-    android:textSize="14sp"
-    android:textStyle="italic"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:ignore="LabelFor,TextContrastCheck,TextViewEdits,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/editTextTextn"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#C8A695"
+        android:backgroundTintMode="src_in"
+        android:drawableStart="@drawable/customsearchicon"
+        android:drawablePadding="12sp"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/what_you_are_looking_for"
+        android:textColor="#ffffff"
+        android:textColorHighlight="#F1EAEA"
+        android:textColorLink="#0FFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,TextContrastCheck,TextViewEdits,VisualLintButtonSize" />
+
 
     <Button
         android:id="@+id/sort"
@@ -254,13 +255,29 @@
         android:textStyle="italic"
         tools:ignore="SmallSp,TextSizeCheck" />
 
+
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
-        app:menu="@menu/menu" />
+        android:layout_marginBottom="2dp"
+        app:menu="@menu/bottom_nav" >
+
+        <ImageButton
+            android:id="@+id/reservationButton"
+            android:layout_width="413dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="My Reservations"
+            android:src="@drawable/baseline_add_shopping_cart_24" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
 
 </RelativeLayout>
 

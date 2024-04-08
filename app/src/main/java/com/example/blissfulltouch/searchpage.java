@@ -1,68 +1,77 @@
 package com.example.blissfulltouch;
 
+import static com.example.blissfulltouch.R.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
+import com.example.blissfulltouch.R;
 
-import java.util.Objects;
 
+import java.util.ArrayList;
 
 public class searchpage extends AppCompatActivity {
 
-    ListView listView;
+    SearchView searchView;
+    ListView myListView;
 
-    String[] serviceslist = {"manicure and pedicure",
-            "moroccan bath",
-            "hot stone massage",
-            "organ relaxing massage",
-            "swedish massage",
-            "balinese massage",
-            "french manicure",
-            "hand nail polish",
-            "nail art design "};
-    ArrayAdapter<String> arrayAdapter;
+    ArrayList<String> arrayList;
+    ArrayAdapter<String> adapter;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_searchpage);
-        listView = findViewById(R.id.listView);
+        setContentView(layout.activity_searchpage);
 
-        arrayAdapter = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, serviceslist);
-        listView.setAdapter(arrayAdapter);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.actionbar_menu, menu);
-        MenuItem menuItem = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) menuItem.getActionView();
 
-        Objects.requireNonNull(searchView).setQueryHint("search here");
+
+        searchView = findViewById(id.searchView);
+        myListView = findViewById(id.listview);
+
+        arrayList = new ArrayList<>();
+        arrayList.add("manicure and pedicur");
+        arrayList.add("moroccan bath");
+        arrayList.add("hot stone massage");
+        arrayList.add("organ relaxing massage");
+        arrayList.add("swedish massage");
+        arrayList.add("balinese massage");
+        arrayList.add("french manicure");
+        arrayList.add("hand nail polish");
+
+
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayList);
+        myListView.setAdapter(adapter);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
-                arrayAdapter.getFilter().filter(newText.toLowerCase()); // Convert newText to lowercase
-
-
+                adapter.getFilter().filter(newText);
                 return false;
             }
         });
 
-        return super.onCreateOptionsMenu(menu);
+
+
+
+        }
     }
-}
+
+
+

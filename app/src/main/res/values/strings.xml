@@ -105,5 +105,7 @@
     <string name="enter_search_query">Enter search query</string>
     <string name="name">name</string>
     <string name="search1">search</string>
+    <string name="my_reservations1">My Reservations</string>
+    <string name="no_booking_to_view">No booking to view</string>
 
 </resources>

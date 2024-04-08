@@ -1,5 +1,5 @@
-package com.example.blissfulltouch;
 
+package com.example.blissfulltouch;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,27 +9,34 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "BlissfulTouch.db";
-    private static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "BlissfulTouch.db";
+    public static final int DATABASE_VERSION = 1;
 
     // Table names and column names
-    private static final String TABLE_USERS = "users";
-    private static final String COLUMN_EMAIL = "email";
-    private static final String COLUMN_NAME = "clientname";
-    private static final String COLUMN_PASSWORD = "pass";
-    private static final String COLUMN_AGE = "age";
+    public static final String TABLE_USERS = "users";
+    public static final String COLUMN_EMAIL = "email";
+    public static final String COLUMN_NAME = "clientname";
+    public static final String COLUMN_PASSWORD = "pass";
+    public static final String COLUMN_AGE = "age";
 
-    private static final String TABLE_SERVICES = "services";
-    private static final String COLUMN_SERVICE_NAME = "servicenm";
-    private static final String COLUMN_DESCRIPTION = "description";
-    private static final String COLUMN_REVIEW = "review";
+    public static final String TABLE_SERVICES = "services";
+    public static final String COLUMN_SERVICE_NAME = "servicenm";
+    public static final String COLUMN_DESCRIPTION = "description";
+    public static final String COLUMN_REVIEW = "review";
 
-    private static final String TABLE_RESERVATION = "reservation";
-    private static final String COLUMN_RESERVATION_ID = "id";
-    private static final String COLUMN_LOCATION = "location";
-    private static final String COLUMN_TIME = "time";
-    private static final String COLUMN_DATE = "date";
-    private static final String COLUMN_SERVICE_NAME_FK = "serviceName";
+    public static final String TABLE_RESERVATION = "reservation";
+    public static final String COLUMN_RESERVATION_ID = "id";
+    public static final String COLUMN_LOCATION = "location";
+    public static final String COLUMN_TIME = "time";
+    public static final String COLUMN_DATE = "date";
+    public static final String COLUMN_SERVICE_NAME_FK = "serviceName";
+
+    // Method to retrieve all reservations from the database
+    public Cursor getAllReservations() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_RESERVATION, null);
+    }
+
 
     public MyDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -151,6 +158,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         MyDB.close(); // Close the database connection
         return exists;
     }
+
     public boolean addReservation(String location, String time, String date, String serviceName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -161,5 +169,6 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-}
 
+
+}
