@@ -21,7 +21,7 @@
             android:exported="false" />
         <activity
             android:name=".registrationForm"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".forlogout"
             android:exported="false" />
@@ -35,8 +35,8 @@
             android:name=".searchpage"
             android:exported="true" />
         <activity
-            android:name=".myreservationspage"
-            android:exported="false" />
+            android:name=".MyReservationsPage"
+            android:exported="true" />
         <activity
             android:name=".homepage"
             android:exported="false" />

@@ -7,20 +7,25 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+        ///\\\
+// Find the reservationButton and attach a click listener to it
         ImageButton reservationButton = findViewById(R.id.reservationButton);
         reservationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Redirect to the MyReservationsPage activity
-                Intent intent = new Intent(homepage.this, myreservationspage.class);
+                Intent intent = new Intent(homepage.this, MyReservationsPage.class);
                 startActivity(intent);
             }
         });
 ///\\\
+
+
         Button addButton = findViewById(R.id.add);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +67,11 @@ public class homepage extends AppCompatActivity {
             }
         });
 
-    }}
+    }
+
+
+}
+
 
     /*@Override
     protected void onCreate(Bundle savedInstanceState) {

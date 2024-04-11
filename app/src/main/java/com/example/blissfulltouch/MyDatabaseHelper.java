@@ -1,4 +1,3 @@
-
 package com.example.blissfulltouch;
 
 import android.content.ContentValues;
@@ -140,6 +139,12 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return result > 0;
     }
 
+    public void deleteAllReservations() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_RESERVATION, null, null);
+        db.close();
+    }
+
 
     public boolean checkemail(String mail) {
         SQLiteDatabase MyDB = this.getReadableDatabase();
@@ -170,5 +175,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public Cursor getAllReservationsCursor() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.query(TABLE_RESERVATION, null, null, null, null, null, null);
+    }
 
 }

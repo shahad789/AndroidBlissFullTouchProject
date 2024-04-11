@@ -273,10 +273,8 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="My Reservations"
-            android:src="@drawable/baseline_add_shopping_cart_24" />
+            android:contentDescription="My Reservations"/>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
 
 
 </RelativeLayout>

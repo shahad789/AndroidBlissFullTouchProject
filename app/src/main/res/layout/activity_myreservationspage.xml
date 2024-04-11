@@ -1,4 +1,3 @@
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,18 +5,18 @@
     android:layout_height="match_parent"
     android:background="#ffffff">
 
-
     <ImageButton
         android:id="@+id/image3"
         android:layout_width="400dp"
         android:layout_height="163dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/boximg2"
         android:contentDescription="@string/boximg3"
-        app:layout_constraintEnd_toEndOf="@id/image2"
+        android:layout_below="@id/MYres"
+        app:layout_constraintEnd_toEndOf="@id/image3"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@id/image3"
         app:srcCompat="@drawable/basic"
         tools:ignore="ImageContrastCheck,RedundantDescriptionCheck" />
 
@@ -26,7 +25,7 @@
         android:layout_width="98dp"
         android:layout_height="48dp"
         android:layout_marginStart="255dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="100dp"
         android:width="60dp"
         android:backgroundTint="#C8A695"
         android:text="@string/edit"
@@ -38,7 +37,7 @@
         android:layout_width="98dp"
         android:layout_height="48dp"
         android:layout_marginStart="255dp"
-        android:layout_marginTop="482dp"
+        android:layout_marginTop="150dp"
         android:width="60dp"
         android:backgroundTint="#C8A695"
         android:text="@string/delete"
@@ -50,277 +49,43 @@
         android:layout_width="98dp"
         android:layout_height="48dp"
         android:layout_marginStart="255dp"
-        android:layout_marginTop="523dp"
+        android:layout_marginTop="200dp"
         android:width="50dp"
         android:backgroundTint="#BDBCBC"
         android:text="@string/review"
         android:textColor="#FFFFFF"
         tools:ignore="TextContrastCheck" />
 
+    <!-- RecyclerView to display list of reservations -->
 
-    <TextView
-        android:id="@+id/thirdser"
-        android:layout_width="wrap_content"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reservationsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="86dp"
+        android:padding="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="450dp"
-        android:text="@string/swedish_massage1"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        app:menu="@menu/bottom_nav" >
 
-    <TextView
-        android:id="@+id/thirddes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="470dp"
-        android:text="@string/date_10_7_202411"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-
-    <TextView
-        android:id="@+id/thirdtime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="490dp"
-        android:text="@string/time_8pm"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-
-    <TextView
-        android:id="@+id/thirdtype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="510dp"
-        android:text="@string/in_spa"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-    <ImageButton
-        android:id="@+id/image2"
-        android:layout_width="400dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="250dp"
-        android:background="@drawable/boximg2"
-        android:contentDescription="@string/secondimg"
-        app:layout_constraintEnd_toEndOf="@id/image"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image"
-        app:srcCompat="@drawable/basic"
-        tools:ignore="ImageContrastCheck,RedundantDescriptionCheck" />
-
-    <Button
-        android:id="@+id/edit1"
-        android:layout_width="98dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="255dp"
-        android:layout_marginTop="270dp"
-        android:width="60dp"
-        android:backgroundTint="#C8A695"
-        android:text="@string/edit1"
-        android:textColor="#FFFFFF"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/delete1"
-        android:layout_width="98dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="255dp"
-        android:layout_marginTop="313dp"
-        android:width="60dp"
-        android:backgroundTint="#C8A695"
-        android:text="@string/delete"
-        android:textColor="#FFFFFF"
-        tools:ignore="TextContrastCheck" />
-
-
-    <Button
-        android:id="@+id/review1"
-        android:layout_width="99dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="255dp"
-        android:layout_marginTop="355dp"
-        android:width="50dp"
-        android:backgroundTint="#BDBCBC"
-        android:text="@string/review"
-        android:textColor="#FFFFFF"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/secname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="280dp"
-        android:text="@string/manicure_and_pedicure"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-
-    <TextView
-        android:id="@+id/serdes1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="300dp"
-        android:text="@string/date_19_4_2024"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/sectime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="320dp"
-        android:text="@string/time_12pm"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/sectype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="340dp"
-        android:text="@string/in_spa1"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-
-    <ImageButton
-        android:id="@+id/image"
-        android:layout_width="400dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/boximg2"
-        android:contentDescription="@string/img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/basic"
-        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,RedundantDescriptionCheck" />
-
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="98dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="255dp"
-        android:layout_marginTop="100dp"
-        android:width="60dp"
-        android:backgroundTint="#C8A695"
-        android:text="@string/edit"
-        android:textColor="#FFFFFF"
-        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="98dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="255dp"
-        android:layout_marginTop="143dp"
-        android:width="60dp"
-        android:backgroundTint="#C8A695"
-        android:contentDescription="@string/delete"
-        android:text="@string/delete"
-        android:textColor="#FFFFFF"
-        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/review"
-        android:layout_width="98dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="255dp"
-        android:layout_marginTop="185dp"
-        android:width="50dp"
-        android:backgroundTint="#BDBCBC"
-        android:text="@string/review"
-        android:textColor="#FFFFFF"
-        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
-
-
-    <TextView
-        android:id="@+id/sername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="120dp"
-        android:text="@string/moroccan_bath"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/serdes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="160dp"
-        android:text="@string/date_26_3_2024"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/sertime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="140dp"
-        android:text="@string/time_5pm"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/sertype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="180dp"
-        android:text="@string/in_home"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
-
+        <ImageButton
+            android:id="@+id/reservationButton"
+            android:layout_width="413dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="My Reservations"
+            />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
     <TextView
         android:id="@+id/MYres"
         android:layout_width="345dp"
@@ -339,36 +104,14 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextSizeCheck" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="2dp"
-        app:menu="@menu/bottom_nav" >
-
-        <ImageButton
-            android:id="@+id/reservationButton"
-            android:layout_width="413dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/my_reservations1"
-            android:src="@drawable/baseline_add_shopping_cart_24" />
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
     <TextView
         android:id="@+id/reservationsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/no_booking_to_view"
+        android:text="No booking to view"
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:layout_centerInParent="true"
         android:visibility="gone" />
 
 </RelativeLayout>
-
-
-
-
