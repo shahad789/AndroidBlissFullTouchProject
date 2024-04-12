@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Other menu items -->
     <item
-
-        android:title="home"
-        android:icon="@drawable/home"
-        android:id="@+id/home"/>
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24" />
     <item
-        android:id="@+id/menu_cart"
-        android:title="@string/my_reservations"
-        android:icon="@drawable/baseline_add_shopping_cart_24" />
+        android:id="@+id/cartt"
+        android:title="My Reservations"
+        android:icon="@drawable/cart_24" />
     <item
-        android:id="@+id/logout"
-        android:title="@string/logout"
+        android:id="@+id/logoutt"
+        android:title="Logout"
         android:icon="@drawable/logouticon" />
 </menu>

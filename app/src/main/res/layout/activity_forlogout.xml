@@ -256,13 +256,7 @@
         android:textStyle="italic"
         tools:ignore="SmallSp,TextSizeCheck" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
-        app:menu="@menu/menu" />
+
 
     <RelativeLayout
         android:id="@+id/alertDialogLayout"

@@ -107,5 +107,9 @@
     <string name="search1">search</string>
     <string name="my_reservations1">My Reservations</string>
     <string name="no_booking_to_view">No booking to view</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 
 </resources>
