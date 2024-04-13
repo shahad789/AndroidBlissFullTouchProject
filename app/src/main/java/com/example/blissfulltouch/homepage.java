@@ -8,6 +8,24 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+
+
+import java.util.ArrayList;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -23,68 +41,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.database.Cursor;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 
 public class homepage extends AppCompatActivity {
-
+    private String userEmail;
+    private MyDatabaseHelper dbHelper;
     ImageView homeicon;
     ImageView carticon;
     ImageView logouticon;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+        dbHelper = new MyDatabaseHelper(this);
 
-        // Initialize views and set click listeners
-        Button addButton = findViewById(R.id.add);
-        addButton.setOnClickListener(new View.OnClickListener() {
+        userEmail = getUserEmailFromDatabase();
+
+
+        Button serviceButton1 = findViewById(R.id.add);
+        serviceButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Redirect to the registration form activity
-                Intent intent = new Intent(homepage.this, registrationForm.class);
-                startActivity(intent);
+                String serviceName = "manicure and pedicure";
+                addServiceAndProceed(serviceName);
             }
         });
-
-        // Add1 Button
-        Button addButton1 = findViewById(R.id.Add1);
-        addButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Redirect to the registration form activity
-                Intent intent = new Intent(homepage.this, registrationForm.class);
-                startActivity(intent);
-            }
-        });
-
-        // Add2 Button
-        Button addButton2 = findViewById(R.id.add2);
-        addButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Redirect to the registration form activity
-                Intent intent = new Intent(homepage.this, registrationForm.class);
-                startActivity(intent);
-            }
-        });
-
-        // Search Button
         Button editTextText = findViewById(R.id.editTextTextn);
         editTextText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,9 +75,48 @@ public class homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // Service button 2
+        Button serviceButton2 = findViewById(R.id.Add1);
+        serviceButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String serviceName = "moroccan_bath";
+                addServiceAndProceed(serviceName);
+            }
+        }); // Service button 3
+        Button serviceButton3 = findViewById(R.id.add2);
+        serviceButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String serviceName = "hot stone massage";
+                addServiceAndProceed(serviceName);
+            }
+        });
+
+        // Add more service buttons as needed...
+    } // Method to add service and proceed to registration form activity
+    private String getUserEmailFromDatabase() {
+        return "user@example.com"; // Just a placeholder, replace it with actual logic to fetch user email
+    }
+    private void addServiceAndProceed(String serviceName) {
+        boolean success = dbHelper.addService(serviceName);
+        if (success) {
+            Toast.makeText(homepage.this, "Service added successfully!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(homepage.this, "Failed to add service!", Toast.LENGTH_SHORT).show();
+        }
+        // Proceed to registration form activity
+        Intent intent = new Intent(homepage.this, registrationForm.class);
+        intent.putExtra("userEmail", userEmail);
+        intent.putExtra("service", serviceName);
+        startActivity(intent);
+
+
+
+
 
         // Intent initialization and click listeners should be placed here
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
         String userEmail = intent.getStringExtra("userEmail");
 
         homeicon = findViewById(R.id.homeicon);

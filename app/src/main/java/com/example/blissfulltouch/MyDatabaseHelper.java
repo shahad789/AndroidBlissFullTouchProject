@@ -20,15 +20,14 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     public static final String TABLE_SERVICES = "services";
     public static final String COLUMN_SERVICE_NAME = "servicenm";
-    public static final String COLUMN_DESCRIPTION = "description";
-    public static final String COLUMN_REVIEW = "review";
 
     public static final String TABLE_RESERVATION = "reservation";
     public static final String COLUMN_RESERVATION_ID = "id";
     public static final String COLUMN_LOCATION = "location";
     public static final String COLUMN_TIME = "time";
     public static final String COLUMN_DATE = "date";
-    public static final String COLUMN_SERVICE_NAME_FK = "serviceName";
+    public static final String COLUMN_USER_EMAIL_FK = "userEmail"; // User's email as foreign key
+    public static final String COLUMN_SERVICE_NAME_FK = "serviceName"; // Service name as foreign key
 
     // Method to retrieve all reservations from the database
     public Cursor getAllReservations() {
@@ -51,11 +50,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PASSWORD + " TEXT)";
         db.execSQL(createUserTableQuery);
 
-        // Create services table
+        // Create services table with just the service name column
         String createServiceTableQuery = "CREATE TABLE " + TABLE_SERVICES +
-                "(" + COLUMN_SERVICE_NAME + " TEXT PRIMARY KEY, " +
-                COLUMN_DESCRIPTION + " TEXT, " +
-                COLUMN_REVIEW + " TEXT)";
+                "(" + COLUMN_SERVICE_NAME + " TEXT PRIMARY KEY)";
         db.execSQL(createServiceTableQuery);
 
         // Create reservation table
@@ -64,13 +61,14 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_LOCATION + " TEXT, " +
                 COLUMN_TIME + " TEXT, " +
                 COLUMN_DATE + " TEXT, " +
+                COLUMN_USER_EMAIL_FK + " TEXT, " +
                 COLUMN_SERVICE_NAME_FK + " TEXT, " +
+                "FOREIGN KEY(" + COLUMN_USER_EMAIL_FK + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_EMAIL + "), " +
                 "FOREIGN KEY(" + COLUMN_SERVICE_NAME_FK + ") REFERENCES " + TABLE_SERVICES + "(" + COLUMN_SERVICE_NAME + "))";
         db.execSQL(createReservationTableQuery);
     }
 
     @Override
-    //to update info in database like edit form
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_RESERVATION);
         onCreate(db);
@@ -89,12 +87,10 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Method to add a new service to the database
-    public boolean addService(String serviceName, String description, String review) {
+    public boolean addService(String serviceName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_SERVICE_NAME, serviceName);
-        contentValues.put(COLUMN_DESCRIPTION, description);
-        contentValues.put(COLUMN_REVIEW, review);
         long result = db.insert(TABLE_SERVICES, null, contentValues);
         return result != -1;
     }
@@ -164,12 +160,14 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return exists;
     }
 
-    public boolean addReservation(String location, String time, String date, String serviceName) {
+    public boolean addReservation(String location, String time, String date, String userEmail, String serviceName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_LOCATION, location);
         contentValues.put(COLUMN_TIME, time);
         contentValues.put(COLUMN_DATE, date);
+        // contentValues.put(COLUMN_USER_EMAIL_FK, userEmail);
+        //contentValues.put(COLUMN_SERVICE_NAME_FK, serviceName);
         long result = db.insert(TABLE_RESERVATION, null, contentValues);
         return result != -1;
     }
@@ -179,5 +177,6 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.query(TABLE_RESERVATION, null, null, null, null, null, null);
     }
+
 
 }

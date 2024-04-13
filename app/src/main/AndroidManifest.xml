@@ -15,22 +15,22 @@
 
         <activity
             android:name=".registrationEditForm"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".registrationViewForm"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".registrationForm"
             android:exported="true" />
         <activity
             android:name=".forlogout"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".alertforok"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".confirmingpage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".searchpage"
             android:exported="true" />
@@ -39,7 +39,7 @@
             android:exported="true" />
         <activity
             android:name=".homepage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".signUp"
             android:exported="true" />
