@@ -52,7 +52,7 @@
         android:layout_margin="20dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/enter_reservation_da"
+        android:hint="@string/enter_reservation_time1"
         android:inputType="text"
         android:minHeight="48dp"
         android:textColor="#181819"

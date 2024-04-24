@@ -293,7 +293,7 @@
 
     <TextView
         android:id="@+id/listicontext"
-        android:layout_width="88dp"
+        android:layout_width="104dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/carticon"
         android:layout_alignTop="@+id/carticon"
@@ -301,7 +301,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="157dp"
         android:layout_marginTop="46dp"
-        android:layout_marginEnd="166dp"
+        android:layout_marginEnd="150dp"
         android:layout_marginBottom="-60dp"
         android:lineSpacingExtra="4sp"
         android:text="My Reservations"
@@ -334,17 +334,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="28dp"
-        android:layout_marginEnd="194dp"
-        android:layout_marginBottom="14dp"
-        android:text="My Reservations"
-
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="13dp"
         android:clickable="true"
+
+        android:contentDescription="Cart Icon"
+        android:text="My Reservations"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/homeicon"
-        app:srcCompat="@drawable/cart_24"
-        android:contentDescription="Cart Icon"
-        />
-
+        app:srcCompat="@drawable/cart_24" />
 
     <ImageView
         android:id="@+id/logouticon"

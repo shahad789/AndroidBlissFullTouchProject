@@ -109,7 +109,11 @@
     <string name="no_booking_to_view">No booking to view</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="enter_reservation_time">enter_reservation_time</string>
+    <string name="enter_reservation_time1">enter reservation time</string>
+    <string name="search_here">Search here...</string>
+    <string name="my_reservations2">My reservations</string>
+    <string name="log_out">log-out</string>
 
 
 </resources>
